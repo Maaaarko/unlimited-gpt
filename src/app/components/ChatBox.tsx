@@ -145,7 +145,7 @@ export default function ChatBox({ model }: ChatBoxProps) {
 
     return (
         <div className="w-full max-h-[80vh] flex-1 flex flex-row gap-8">
-            <div className="self-stretch w-1/4">
+            <div className="hidden md:block  self-stretch w-1/4">
                 <textarea
                     className="bg-grey/30 p-2.5 h-full w-full resize-none rounded-md border border-white/30 outline-none focus:border-primary-blue "
                     placeholder="Describe the system..."
@@ -153,7 +153,7 @@ export default function ChatBox({ model }: ChatBoxProps) {
                     onChange={handleSystemPromptChange}
                 />
             </div>
-            <div className="relative overflow-auto bg-grey/30 w-3/4 self-stretch rounded-md border border-white/30 flex flex-col justify-between o">
+            <div className="relative overflow-auto bg-grey/30 w-full md:w-3/4 self-stretch rounded-md border border-white/30 flex flex-col justify-between">
                 <div>
                     <MessageList messages={allMessages} isLoading={isLoading} />
                 </div>
