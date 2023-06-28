@@ -2,7 +2,7 @@ import { Message } from "ai"
 import { MouseEventHandler } from "react"
 
 export interface ChatBoxProps {
-    model: "gpt-3.5-turbo" | "gpt-4"
+    model: ModelName
 }
 
 export interface CustomButtonProps {
@@ -38,11 +38,11 @@ export interface MessageFeedItem {
     userIconUrl?: string
 }
 
-export type ModelName = "gpt-3.5-turbo" | "gpt-4"
+export type ModelName = "gpt-3.5-turbo" | "gpt-3.5-turbo-16k" | "gpt-4" | "gpt-4-32k"
 
 export interface ModelPickerProps {
     selectedModel: ModelName
-    setSelectedModel: (model: "gpt-3.5-turbo" | "gpt-3.5-turbo-16k" | "gpt-4" | "gpt-4-32k") => void
+    setSelectedModel: (model: ModelName) => void
 }
 
 export interface UsageReport {
